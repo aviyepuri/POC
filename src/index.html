@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Include bootstrap for responsivesness-->
+    <link rel="stylesheet"
+          href="/Users/Avi/Documents/Projects/POC//vendor/bootstrap/dist/css/bootstrap.min.css"/>
+
+
+    <script src="/Users/Avi/Documents/Projects/POC//vendor/angular/angular.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC//vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC//vendor/angular-mocks/angular-mocks.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC//vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC//vendor/bootstrap/dist/css/bootstrap.min.css"></script>
+    <script src="/Users/Avi/Documents/Projects/POC//vendor/jquery/dist/jquery.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC/vendor/lodash/dist/lodash.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC/vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
+
+    <script src="/Users/Avi/Documents/Projects/POC/src/app/app.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC/src/app/about/about.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC/src/app/child/child.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC/src/app/home/home.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC/src/app/seperate/seperate.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC/build/templates-app.js"></script>
+    <script src="/Users/Avi/Documents/Projects/POC/build/templates-common.js"></script>
+
+    <title ng-bind="pageTitle"></title>
+  </head>
+  <body ng-app="ngBoilerplate" ng-controller="AppCtrl" class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <span>
+        <button class="btn-danger" ui-sref="home">
+          Home
+        </button>
+      </span>
+      <span>
+        <button class="btn-danger" ui-sref="about">
+          About
+        </button>
+      </span>
+    </div>
+  </div>
+  <div class="container" ui-view="main"></div>
+  <br>
+  <button ui-sref="app" class="btn-primary">parent state</button>
+  <button class='btn-primary' ui-sref="seperate">seperate state</button>
+  <div class="row">
+    <div ui-view="left_side" class="col-sm-6"></div>
+    <div ui-view="right_side" class="col-sm-6"></div>
+  </div>
+
+
+
+  </body>
+</html>
