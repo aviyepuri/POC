@@ -12,7 +12,7 @@
         .controller('childController',function ctrl($scope,$http){
             $scope.childStateMessage = 'I am the child state';
             var parameter = JSON.stringify({"hcid":"555555551","requestHeader":{"userName":"PPORT","password":"yB3Jid2OZ062CKsLbKZvDiFZqmaRV"}});
-            $http.post('http://va10duvwbs033:19080/pportmemberssvc/getSummary',parameter).then(function(resp) {
+            $http.post('http://30.135.90.221:19080/pportmemberssvc/getSummary',parameter).then(function(resp) {
                 $scope.conditions = resp;
             }, function(err) {
                 console.error('ERR', err);

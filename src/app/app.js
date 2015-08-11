@@ -41,11 +41,11 @@
                 .state('app', {
                     url: '/parent',
 
-                    resolve: {
+                    /*resolve: {
                         user: ['UserSessionService', function (userSessionService) {
                             return userSessionService.getSessionUser();
                         }]
-                    },
+                    },*/
 
                     views: {
                         'left_side@': {
